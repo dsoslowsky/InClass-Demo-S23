@@ -41,9 +41,17 @@
                 margin-top: 32px;
             }
 
+            input{
+                border: none;
+                border: 1px solid var(--gray);
+                padding: 15px 0px 15px 8px;
+            }
+
             button{
                 background-color: var(--purple);
                 color: white;
+                border: none;
+                padding: 16px 24px;
             }
         }
        } 
