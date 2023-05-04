@@ -17,20 +17,35 @@
 
   >div{
         grid-area: about;
-        background-color: lightseagreen;
 
-        @include xl{
+        @include md{
             display: grid;
             grid-template-columns: 50% auto;
-            gap: 136px;
         }
 
-        h1{
-            padding-bottom: 16px;
+        aside{
+            margin-bottom: 24px;
 
-            @include lg{
-                padding-bottom: 24px;
+            @include md{
+                margin-bottom: 0px;
             }
         }
+
+        section{
+           @include md{
+            display: flex;
+            align-items: center;
+            padding-left: 136px;
+           }
+           
+            h1{
+                padding-bottom: 16px;
+    
+                @include lg{
+                    padding-bottom: 24px;
+                }
+            }
+        }
+
     }
 }

@@ -3,9 +3,20 @@
 ============= */
 
 header{
+    padding: 16px 0px;
+    
+    @include xxl{
+        padding: 24px 0px;
+    }
+
+
     div{
+        display: flex;
+
         nav{
+            margin-left: auto;
             ul{
+                display: flex;
                 li{
                     a{
                         color: var(--gray)

@@ -2,4 +2,32 @@
     Footer
 ============= */
 footer{
+    padding: 0px 16px;
+
+    >div{
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: 
+        "fl fc"
+        "fl fm";
+
+        @include md{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "fl fm fc";
+        }
+
+        #fl{
+            grid-area: fl;
+        }
+        #fc{
+            grid-area: fc;
+        }
+        #fm{
+            grid-area: fm;
+
+            span{
+                color: var(--purple);
+            }
+        }
+    }
 }
