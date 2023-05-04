@@ -8,6 +8,14 @@ ul{
 }
 
 
+.content-spacing{
+    padding-top: 32px;
+    
+    @include md{
+        padding-top: 64px;
+    }
+}
+
 
 .header-footer-grid{
     display: grid;

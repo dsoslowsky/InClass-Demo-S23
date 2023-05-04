@@ -337,6 +337,15 @@ ul li {
   list-style: none;
 }
 
+.content-spacing {
+  padding-top: 32px;
+}
+@media (min-width: 768px) {
+  .content-spacing {
+    padding-top: 64px;
+  }
+}
+
 .header-footer-grid {
   display: grid;
   grid-template-columns: 16px auto 16px;
@@ -353,6 +362,11 @@ ul li {
 /* =============
     Typography
 ============= */
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+}
+
 /* =============
     Buttons
 ============= */
@@ -420,6 +434,14 @@ header div nav ul li a {
     gap: 136px;
   }
 }
+#about > div h1 {
+  padding-bottom: 16px;
+}
+@media (min-width: 1024px) {
+  #about > div h1 {
+    padding-bottom: 24px;
+  }
+}
 
 /* =============
     Partners
@@ -459,6 +481,8 @@ header div nav ul li a {
   padding-top: 100px;
   padding-bottom: 100px;
   text-align: center;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
 }
 @media (min-width: 1200px) {
   #partners > div ul #p1 {
@@ -516,7 +540,27 @@ header div nav ul li a {
 }
 #request > div {
   grid-area: request;
-  background-color: lightseagreen;
+}
+#request > div h1 {
+  padding-bottom: 16px;
+}
+@media (min-width: 1024px) {
+  #request > div h1 {
+    padding-bottom: 24px;
+  }
+}
+#request > div form {
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  #request > div form {
+    margin-top: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  #request > div form {
+    margin-top: 32px;
+  }
 }
 #request > div form button {
   background-color: var(--purple);

@@ -24,5 +24,13 @@
             grid-template-columns: 50% auto;
             gap: 136px;
         }
+
+        h1{
+            padding-bottom: 16px;
+
+            @include lg{
+                padding-bottom: 24px;
+            }
+        }
     }
 }
