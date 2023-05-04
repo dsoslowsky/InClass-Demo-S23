@@ -22,5 +22,12 @@
        >div{
         grid-area: request;
         background-color: lightseagreen;
+
+        form{
+            button{
+                background-color: var(--purple);
+                color: white;
+            }
+        }
        } 
 }

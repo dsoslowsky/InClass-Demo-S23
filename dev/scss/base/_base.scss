@@ -1,6 +1,13 @@
 /* =============
     Base
 ============= */
+ul{
+    li{
+        list-style: none;
+    }
+}
+
+
 
 .header-footer-grid{
     display: grid;
