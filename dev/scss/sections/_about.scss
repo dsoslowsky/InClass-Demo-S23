@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: var(--grid-margin-mobile) auto var(--grid-margin-mobile);
     grid-template-areas: ". about .";
+    text-align: center;
 
     @include md{
         grid-template-columns: 12% auto 12%;
@@ -46,14 +47,33 @@
            @include md{
             display: flex;
             align-items: center;
+            margin-top: 24px;
             padding-left: 136px;
            }
            
             h1{
                 padding-bottom: 16px;
+                font-weight: 500;
+                line-height: 133.5%;
+                margin-bottom: -10px;
+                font-size: rem-calc(24);
     
+                @include md{
+                    font-size: rem-calc(44);
+                }
+
                 @include lg{
-                    padding-bottom: 24px;
+                    margin-bottom: 24px;
+                }
+            }
+
+            p{
+                line-height: 133.5%;
+                margin-top: 10px;
+
+                @include md{
+                    padding: 0px 10%;
+                    font-size: rem-calc(28);
                 }
             }
         }

@@ -4,6 +4,12 @@
 
 nav{
     ul{
+        display: none;
+
+        @include lg{
+            display: block;
+        }
+
         li{
             a:link, a:visited{
                 padding: 24px 36px;
@@ -11,6 +17,7 @@ nav{
                 color: var(--gray);
                 border-radius: 6px;
                 transition: 0.25s;
+                font-family: 'Roboto', sans-serif;
 
                 &:hover, &:active{
                     background-color: var(--gray);

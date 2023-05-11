@@ -372,6 +372,25 @@ a {
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.main-titles {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .main-titles {
+    font-size: 2.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  .main-titles {
+    font-size: 3.5rem;
+  }
+}
+
 h1, h2, h3, h4, h5, p {
   margin: 0;
   padding: 0;
@@ -401,12 +420,21 @@ textarea {
 /* =============
     Navigation
 ============= */
+nav ul {
+  display: none;
+}
+@media (min-width: 1024px) {
+  nav ul {
+    display: block;
+  }
+}
 nav ul li a:link, nav ul li a:visited {
   padding: 24px 36px;
   border: 1px solid var(--gray);
   color: var(--gray);
   border-radius: 6px;
   transition: 0.25s;
+  font-family: "Roboto", sans-serif;
 }
 nav ul li a:link:hover, nav ul li a:link:active, nav ul li a:visited:hover, nav ul li a:visited:active {
   background-color: var(--gray);
@@ -442,6 +470,8 @@ header div nav ul li a {
 ============= */
 footer {
   padding: 0px 16px;
+  padding-bottom: 32px;
+  font-size: 0.75rem;
 }
 footer > div {
   display: grid;
@@ -456,12 +486,26 @@ footer > div {
 }
 footer > div #fl {
   grid-area: fl;
+  text-align: right;
 }
 footer > div #fc {
   grid-area: fc;
+  text-align: right;
+  margin-bottom: 8px;
+}
+@media (min-width: 768px) {
+  footer > div #fc {
+    margin-bottom: 0px;
+  }
 }
 footer > div #fm {
   grid-area: fm;
+  text-align: right;
+}
+@media (min-width: 768px) {
+  footer > div #fm {
+    text-align: center;
+  }
 }
 footer > div #fm span {
   color: var(--purple);
@@ -512,6 +556,7 @@ footer > div #fm span {
   display: grid;
   grid-template-columns: var(--grid-margin-mobile) auto var(--grid-margin-mobile);
   grid-template-areas: ". about .";
+  text-align: center;
 }
 @media (min-width: 768px) {
   #about {
@@ -552,15 +597,35 @@ footer > div #fm span {
   #about #about-content #about-info {
     display: flex;
     align-items: center;
+    margin-top: 24px;
     padding-left: 136px;
   }
 }
 #about #about-content #about-info h1 {
   padding-bottom: 16px;
+  font-weight: 500;
+  line-height: 133.5%;
+  margin-bottom: -10px;
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  #about #about-content #about-info h1 {
+    font-size: 2.75rem;
+  }
 }
 @media (min-width: 1024px) {
   #about #about-content #about-info h1 {
-    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+}
+#about #about-content #about-info p {
+  line-height: 133.5%;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  #about #about-content #about-info p {
+    padding: 0px 10%;
+    font-size: 1.75rem;
   }
 }
 
@@ -571,6 +636,7 @@ footer > div #fm span {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". partners .";
+  text-align: center;
 }
 @media (min-width: 1440px) {
   #partners {
@@ -579,6 +645,20 @@ footer > div #fm span {
 }
 #partners > div {
   grid-area: partners;
+}
+#partners > div h2 {
+  font-weight: 400;
+  font-size: rm-calc(16);
+}
+@media (min-width: 768px) {
+  #partners > div h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  #partners > div h2 {
+    font-size: 2rem;
+  }
 }
 #partners > div ul {
   margin-top: 24px;
@@ -646,6 +726,7 @@ footer > div #fm span {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". request .";
+  text-align: center;
 }
 @media (min-width: 768px) {
   #request {
@@ -673,6 +754,9 @@ footer > div #fm span {
     padding-bottom: 24px;
   }
 }
+#request > div p {
+  font-size: 1.5rem;
+}
 #request > div form {
   margin-top: 32px;
   display: grid;
@@ -687,16 +771,12 @@ footer > div #fm span {
   #request > div form {
     margin-top: 32px;
     grid-template-columns: auto 20%;
+    box-sizing: border-box;
   }
 }
 @media (min-width: 1200px) {
   #request > div form {
-    grid-template-columns: auto 20%;
-  }
-}
-@media (min-width: 1440px) {
-  #request > div form {
-    grid-template-columns: auto 20%;
+    grid-template-columns: auto 23%;
   }
 }
 #request > div form input {
