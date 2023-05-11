@@ -17,7 +17,7 @@
       "oAP" : "\/Assets\/about-left.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -30,7 +30,7 @@
       "oAP" : "\/Assets\/about.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -83,20 +83,20 @@
       "oAP" : "\/Assets\/hero-2.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
     },
     "\/Assets\/hero.jpg" : {
       "ft" : 16384,
-      "iS" : 479600,
+      "iS" : 344192,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/Assets\/hero.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
