@@ -399,6 +399,11 @@ h1, h2, h3, h4, h5, p {
 /* =============
     Buttons
 ============= */
+button {
+  margin: 0;
+  padding: 0;
+}
+
 /* =============
     Forms
 ============= */
@@ -420,49 +425,60 @@ textarea {
 /* =============
     Navigation
 ============= */
-nav ul {
+html {
+  scroll-behavior: smooth;
+}
+
+.show-menu {
+  display: block !important;
+}
+
+nav {
   display: none;
 }
-@media (min-width: 1024px) {
-  nav ul {
-    display: block;
-  }
+nav ul li {
+  text-align: right;
 }
 nav ul li a:link, nav ul li a:visited {
-  padding: 24px 36px;
-  border: 1px solid var(--gray);
-  color: var(--gray);
-  border-radius: 6px;
-  transition: 0.25s;
-  font-family: "Roboto", sans-serif;
-}
-nav ul li a:link:hover, nav ul li a:link:active, nav ul li a:visited:hover, nav ul li a:visited:active {
-  background-color: var(--gray);
-  color: var(--white);
+  display: inline-block;
+  color: black;
+  padding: 16px 0 16px;
+  font-weight: 500;
 }
 
 /* =============
     Header
 ============= */
 header {
-  padding: 16px 0px;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-areas: "logo burger" "nav nav";
+  padding: 16px;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.3);
 }
-@media (min-width: 1440px) {
-  header {
-    padding: 24px 0px;
-  }
-}
-header div {
+header #logo {
+  grid-area: logo;
   display: flex;
+  align-items: center;
 }
-header div nav {
-  margin-left: auto;
-}
-header div nav ul {
+header #burger-container {
+  grid-area: burger;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-header div nav ul li a {
-  color: var(--gray);
+header #burger-container button {
+  border: none;
+  background-color: transparent;
+  color: black;
+  font-size: ren-calc(20);
+}
+header nav {
+  grid-area: nav;
 }
 
 /* =============
@@ -553,6 +569,7 @@ footer > div #fm span {
     About
 ============= */
 #about {
+  scroll-margin-top: 98px;
   display: grid;
   grid-template-columns: var(--grid-margin-mobile) auto var(--grid-margin-mobile);
   grid-template-areas: ". about .";
@@ -633,6 +650,7 @@ footer > div #fm span {
     Partners
 ============= */
 #partners {
+  scroll-margin-top: 98px;
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". partners .";
@@ -722,74 +740,75 @@ footer > div #fm span {
 /* =============
     Request
 ============= */
-#request {
+#requests {
+  scroll-margin-top: 98px;
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". request .";
   text-align: center;
 }
 @media (min-width: 768px) {
-  #request {
+  #requests {
     grid-template-columns: 12% auto 12%;
   }
 }
 @media (min-width: 1200px) {
-  #request {
+  #requests {
     grid-template-columns: 20% auto 20%;
   }
 }
 @media (min-width: 1440px) {
-  #request {
+  #requests {
     grid-template-columns: auto 700px auto;
   }
 }
-#request > div {
+#requests > div {
   grid-area: request;
 }
-#request > div h1 {
+#requests > div h1 {
   padding-bottom: 16px;
 }
 @media (min-width: 1024px) {
-  #request > div h1 {
+  #requests > div h1 {
     padding-bottom: 24px;
   }
 }
-#request > div p {
+#requests > div p {
   font-size: 1.5rem;
 }
-#request > div form {
+#requests > div form {
   margin-top: 32px;
   display: grid;
 }
 @media (min-width: 768px) {
-  #request > div form {
+  #requests > div form {
     margin-top: 24px;
     grid-template-columns: auto 30%;
   }
 }
 @media (min-width: 1024px) {
-  #request > div form {
+  #requests > div form {
     margin-top: 32px;
     grid-template-columns: auto 20%;
     box-sizing: border-box;
   }
 }
 @media (min-width: 1200px) {
-  #request > div form {
+  #requests > div form {
     grid-template-columns: auto 23%;
   }
 }
-#request > div form input {
+#requests > div form input {
   border: none;
   border: 1px solid var(--gray);
   padding: 15px 0px 15px 8px;
 }
 @media (min-width: 768px) {
-  #request > div form input {
+  #requests > div form input {
     border-radius: 6px 0px 0px 6px;
   }
 }
-#request > div form button {
+#requests > div form button {
   background-color: var(--purple);
   color: white;
   border: none;
@@ -799,7 +818,7 @@ footer > div #fm span {
   border-radius: 6px;
 }
 @media (min-width: 768px) {
-  #request > div form button {
+  #requests > div form button {
     margin-left: initial;
     padding: 0px 24px;
     height: 100%;

@@ -3,6 +3,11 @@
 ============= */
 
 #partners{
+
+    // this is the offset magic
+    scroll-margin-top: 98px;
+//
+
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". partners .";
