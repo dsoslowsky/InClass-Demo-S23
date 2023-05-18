@@ -10,11 +10,15 @@
 
         display: grid;
         grid-template-columns: 16px auto 16px;
-        grid-template-areas: ". request .";
+        grid-template-areas: ". requests .";
         text-align: center;
 
         @include md{
             grid-template-columns: 12% auto 12%;
+        }
+
+        @include lg{
+            scroll-margin-top: 110px;
         }
 
         @include xl{
@@ -26,7 +30,7 @@
         }
     
        >div{
-        grid-area: request;
+        grid-area: requests;
 
         h1{
             padding-bottom: 16px;
